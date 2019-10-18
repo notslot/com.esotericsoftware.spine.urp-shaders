@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0b989251-eeb1-4374-a778-510107283ede" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/LICENSE.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LICENSE.md.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shaders.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shaders/CGIncludes.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shaders/CGIncludes/Spine-Common-ShadowCasterPass-URP.hlsl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shaders/CGIncludes/Spine-Common-ShadowCasterPass-URP.hlsl.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shaders/CGIncludes/Spine-DepthOnlyPass-URP.hlsl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shaders/CGIncludes/Spine-DepthOnlyPass-URP.hlsl.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shaders/CGIncludes/Spine-Input-URP.hlsl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shaders/CGIncludes/Spine-Input-URP.hlsl.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shaders/CGIncludes/Spine-Skeleton-ForwardPass-URP.hlsl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shaders/CGIncludes/Spine-Skeleton-ForwardPass-URP.hlsl.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shaders/CGIncludes/Spine-SkeletonLit-ForwardPass-URP.hlsl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shaders/CGIncludes/Spine-SkeletonLit-ForwardPass-URP.hlsl.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shaders/CGIncludes/Spine-SkeletonLit-ShadowCasterPass-URP.hlsl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shaders/CGIncludes/Spine-SkeletonLit-ShadowCasterPass-URP.hlsl.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shaders/CGIncludes/Spine-Sprite-ForwardPass-URP.hlsl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shaders/CGIncludes/Spine-Sprite-ForwardPass-URP.hlsl.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shaders/CGIncludes/Spine-Sprite-ShadowCasterPass-URP.hlsl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shaders/CGIncludes/Spine-Sprite-ShadowCasterPass-URP.hlsl.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shaders/CGIncludes/SpineCoreShaders.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shaders/CGIncludes/SpineCoreShaders/ShaderShared.cginc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shaders/CGIncludes/SpineCoreShaders/ShaderShared.cginc.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shaders/CGIncludes/SpineCoreShaders/SpriteLighting.cginc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shaders/CGIncludes/SpineCoreShaders/SpriteLighting.cginc.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shaders/Spine-Skeleton-URP.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shaders/Spine-Skeleton-URP.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shaders/Spine-SkeletonLit-URP.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shaders/Spine-SkeletonLit-URP.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shaders/Spine-Sprite-URP.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shaders/Spine-Sprite-URP.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package.json.meta" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Shaders/CGIncludes/Spine-SkeletonLit-ForwardPass-URP.hlsl" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Shaders/CGIncludes/Spine-Sprite-ForwardPass-URP.hlsl" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Shaders/CGIncludes/Spine-SkeletonLit-ShadowCasterPass-URP.hlsl" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Shaders/CGIncludes/Spine-Sprite-ShadowCasterPass-URP.hlsl" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Shaders/CGIncludes/Spine-Input-URP.hlsl" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Shaders/CGIncludes/Spine-DepthOnlyPass-URP.hlsl" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Shaders/CGIncludes/Spine-Common-ShadowCasterPass-URP.hlsl" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Shaders/CGIncludes/SpineCoreShaders/SpriteLighting.cginc" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Shaders/CGIncludes/SpineCoreShaders/ShaderShared.cginc" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Shaders/CGIncludes/Spine-Skeleton-ForwardPass-URP.hlsl" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Shaders/CGIncludes.meta" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Shaders/Spine-Sprite-URP.shader" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Shaders/Spine-Sprite-URP.shader.meta" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Shaders/Spine-Skeleton-URP.shader" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Shaders/Spine-SkeletonLit-URP.shader" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/Shaders/Spine-Skeleton-LW.shader" />
+        <option value="$PROJECT_DIR$/Shaders/Spine-SkeletonLit-LW.shader" />
+        <option value="$PROJECT_DIR$/Shaders/Spine-Sprite-LW.shader" />
+        <option value="$PROJECT_DIR$/Shaders/CGIncludes/Spine-Common-ShadowCasterPass-URP.hlsl" />
+        <option value="$PROJECT_DIR$/Shaders/CGIncludes/Spine-Skeleton-ForwardPass-URP.hlsl" />
+        <option value="$PROJECT_DIR$/Shaders/CGIncludes/Spine-SkeletonLit-ShadowCasterPass-URP.hlsl" />
+        <option value="$PROJECT_DIR$/Shaders/CGIncludes/Spine-Sprite-ShadowCasterPass-URP.hlsl" />
+        <option value="$PROJECT_DIR$/Shaders/CGIncludes/Spine-DepthOnlyPass-URP.hlsl" />
+        <option value="$PROJECT_DIR$/Shaders/CGIncludes/Spine-Input-URP.hlsl" />
+        <option value="$PROJECT_DIR$/Shaders/CGIncludes/Spine-SkeletonLit-ForwardPass-URP.hlsl" />
+        <option value="$PROJECT_DIR$/Shaders/CGIncludes/Spine-Sprite-ForwardPass-URP.hlsl" />
+        <option value="$PROJECT_DIR$/Shaders/Spine-Sprite-URP.shader" />
+        <option value="$PROJECT_DIR$/Shaders/Spine-Skeleton-URP.shader" />
+        <option value="$PROJECT_DIR$/Shaders/Spine-SkeletonLit-URP.shader" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1SMgukMNN2pKATS3hy6WW4UmPp3" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
+    <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0b989251-eeb1-4374-a778-510107283ede" name="Default Changelist" comment="" />
+      <created>1571379103173</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1571379103173</updated>
+      <workItem from="1571379105065" duration="3079000" />
+    </task>
+    <servers />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" suspend="NONE" type="DotNet Exception Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
