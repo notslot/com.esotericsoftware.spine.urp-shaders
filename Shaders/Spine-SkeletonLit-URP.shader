@@ -1,8 +1,4 @@
-﻿// - forwardPass(Universal Vertex Lit) + ShadowCaster + DepthOnly
-// - Premultiplied Alpha Blending (Optional straight alpha input)
-// - Double-sided, no depth
-
-Shader "Universal Render Pipeline/Spine/Skeleton Lit" {
+﻿Shader "Universal Render Pipeline/Spine/Skeleton Lit" {
 	Properties {
 		_Cutoff ("Shadow alpha cutoff", Range(0,1)) = 0.1
 		[NoScaleOffset] _MainTex ("Main Texture", 2D) = "black" {}
@@ -12,14 +8,14 @@ Shader "Universal Render Pipeline/Spine/Skeleton Lit" {
 	}
 
 	SubShader {
-		// Universal Pipeline tag is required. If Universal render pipeline is not set in the graphics settings
+		// Lightweight Pipeline tag is required. If Lightweight render pipeline is not set in the graphics settings
 		// this Subshader will fail.
 		Tags { "RenderPipeline" = "UniversalPipeline" "Queue"="Transparent" "IgnoreProjector"="True" "RenderType"="Transparent" }
 		LOD 100
 		Cull Off
 		ZWrite Off
 		Blend One OneMinusSrcAlpha
-		
+
 		Stencil {
 			Ref[_StencilRef]
 			Comp[_StencilComp]
@@ -38,17 +34,16 @@ Shader "Universal Render Pipeline/Spine/Skeleton Lit" {
 			// Required to compile gles 2.0 with standard srp library
 			#pragma prefer_hlslcc gles
 			#pragma exclude_renderers d3d11_9x
-			#pragma target 2.0
 
 			// -------------------------------------
-			// Universal Pipeline keywords
+			// Lightweight Pipeline keywords
 			#pragma multi_compile _ _MAIN_LIGHT_SHADOWS
 			#pragma multi_compile _ _MAIN_LIGHT_SHADOWS_CASCADE
 			#pragma multi_compile _ _ADDITIONAL_LIGHTS_VERTEX _ADDITIONAL_LIGHTS
 			#pragma multi_compile _ _ADDITIONAL_LIGHT_SHADOWS
 			#pragma multi_compile _ _SHADOWS_SOFT
 			#pragma multi_compile _ _MIXED_LIGHTING_SUBTRACTIVE
-			
+
 			// -------------------------------------
 			// Unity defined keywords
 			#pragma multi_compile_fog
@@ -62,7 +57,6 @@ Shader "Universal Render Pipeline/Spine/Skeleton Lit" {
 			#pragma shader_feature _ _STRAIGHT_ALPHA_INPUT
 			#pragma vertex vert
 			#pragma fragment frag
-			#pragma target 2.0
 
 			#undef LIGHTMAP_ON
 
@@ -73,7 +67,7 @@ Shader "Universal Render Pipeline/Spine/Skeleton Lit" {
 			#define fixed4 half4
 			#define fixed3 half3
 			#define fixed half
-			#include "CGIncludes/Spine-SkeletonLit-ForwardPass-URP.hlsl"
+			#include "Include/Spine-SkeletonLit-ForwardPass-URP.hlsl"
 			ENDHLSL
 	 	}
 
@@ -111,8 +105,8 @@ Shader "Universal Render Pipeline/Spine/Skeleton Lit" {
 			#define fixed4 half4
 			#define fixed3 half3
 			#define fixed half
-			#include "CGIncludes/Spine-Input-URP.hlsl"
-			#include "CGIncludes/Spine-SkeletonLit-ShadowCasterPass-URP.hlsl"
+			#include "Include/Spine-Input-URP.hlsl"
+			#include "Include/Spine-SkeletonLit-ShadowCasterPass-URP.hlsl"
 
 			ENDHLSL
 		}
@@ -130,7 +124,6 @@ Shader "Universal Render Pipeline/Spine/Skeleton Lit" {
 			// Required to compile gles 2.0 with standard srp library
 			#pragma prefer_hlslcc gles
 			#pragma exclude_renderers d3d11_9x
-			#pragma target 2.0
 
 			#pragma vertex DepthOnlyVertexSprite
 			#pragma fragment DepthOnlyFragmentSprite
@@ -151,8 +144,8 @@ Shader "Universal Render Pipeline/Spine/Skeleton Lit" {
 			#define fixed4 half4
 			#define fixed3 half3
 			#define fixed half
-			#include "CGIncludes/Spine-Input-URP.hlsl"
-			#include "CGIncludes/Spine-DepthOnlyPass-URP.hlsl"
+			#include "Include/Spine-Input-URP.hlsl"
+			#include "Include/Spine-DepthOnlyPass-URP.hlsl"
 			ENDHLSL
 		}
 	}

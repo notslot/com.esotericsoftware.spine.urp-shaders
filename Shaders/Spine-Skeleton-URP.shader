@@ -15,7 +15,7 @@ Shader "Universal Render Pipeline/Spine/Skeleton" {
 		Cull Off
 		ZWrite Off
 		Blend One OneMinusSrcAlpha
-		
+
 		Stencil {
 			Ref[_StencilRef]
 			Comp[_StencilComp]
@@ -34,7 +34,6 @@ Shader "Universal Render Pipeline/Spine/Skeleton" {
 			// Required to compile gles 2.0 with standard srp library
 			#pragma prefer_hlslcc gles
 			#pragma exclude_renderers d3d11_9x
-			#pragma target 2.0
 
 			// -------------------------------------
 			// Universal Pipeline keywords
@@ -42,7 +41,7 @@ Shader "Universal Render Pipeline/Spine/Skeleton" {
 			#pragma multi_compile _ _MAIN_LIGHT_SHADOWS_CASCADE
 			#pragma multi_compile _ _ADDITIONAL_LIGHT_SHADOWS
 			#pragma multi_compile _ _SHADOWS_SOFT
-			
+
 			// -------------------------------------
 			// Unity defined keywords
 			#pragma multi_compile_fog
@@ -56,7 +55,6 @@ Shader "Universal Render Pipeline/Spine/Skeleton" {
 			#pragma shader_feature _ _STRAIGHT_ALPHA_INPUT
 			#pragma vertex vert
 			#pragma fragment frag
-			#pragma target 2.0
 
 			#undef LIGHTMAP_ON
 
@@ -67,7 +65,7 @@ Shader "Universal Render Pipeline/Spine/Skeleton" {
 			#define fixed4 half4
 			#define fixed3 half3
 			#define fixed half
-			#include "CGIncludes/Spine-Skeleton-ForwardPass-URP.hlsl"
+			#include "Include/Spine-Skeleton-ForwardPass-URP.hlsl"
 			ENDHLSL
 	 	}
 
@@ -105,8 +103,8 @@ Shader "Universal Render Pipeline/Spine/Skeleton" {
 			#define fixed4 half4
 			#define fixed3 half3
 			#define fixed half
-			#include "CGIncludes/Spine-Input-URP.hlsl"
-			#include "CGIncludes/Spine-SkeletonLit-ShadowCasterPass-URP.hlsl"
+			#include "Include/Spine-Input-URP.hlsl"
+			#include "Include/Spine-SkeletonLit-ShadowCasterPass-URP.hlsl"
 
 			ENDHLSL
 		}
@@ -124,7 +122,6 @@ Shader "Universal Render Pipeline/Spine/Skeleton" {
 			// Required to compile gles 2.0 with standard srp library
 			#pragma prefer_hlslcc gles
 			#pragma exclude_renderers d3d11_9x
-			#pragma target 2.0
 
 			#pragma vertex DepthOnlyVertexSprite
 			#pragma fragment DepthOnlyFragmentSprite
@@ -145,8 +142,8 @@ Shader "Universal Render Pipeline/Spine/Skeleton" {
 			#define fixed4 half4
 			#define fixed3 half3
 			#define fixed half
-			#include "CGIncludes/Spine-Input-URP.hlsl"
-			#include "CGIncludes/Spine-DepthOnlyPass-URP.hlsl"
+			#include "Include/Spine-Input-URP.hlsl"
+			#include "Include/Spine-DepthOnlyPass-URP.hlsl"
 			ENDHLSL
 		}
 	}

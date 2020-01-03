@@ -9,7 +9,7 @@ Shader "Universal Render Pipeline/Spine/Sprite"
 		_BumpMap("Normal Map", 2D) = "bump" {}
 
 		[MaterialToggle] PixelSnap("Pixel snap", Float) = 0
-		[PerRendererData] _AlphaTex("External Alpha", 2D) = "white" {} 
+		[PerRendererData] _AlphaTex("External Alpha", 2D) = "white" {}
 		[PerRendererData] _EnableExternalAlpha("Enable External Alpha", Float) = 0
 
 		_EmissionColor("Color", Color) = (0,0,0,0)
@@ -78,7 +78,6 @@ Shader "Universal Render Pipeline/Spine/Sprite"
 			// All shaders must be compiled with HLSLcc and currently only gles is not using HLSLcc by default
 			#pragma prefer_hlslcc gles
 			#pragma exclude_renderers d3d11_9x
-			#pragma target 2.0
 
 			// -------------------------------------
 			// Material Keywords
@@ -99,7 +98,7 @@ Shader "Universal Render Pipeline/Spine/Sprite"
 			#pragma multi_compile_fog
 			#pragma multi_compile _ PIXELSNAP_ON
 			#pragma multi_compile _ ETC1_EXTERNAL_ALPHA
-			
+
 			// -------------------------------------
 			// Universal Pipeline keywords
 			#pragma multi_compile _ _MAIN_LIGHT_SHADOWS
@@ -108,17 +107,17 @@ Shader "Universal Render Pipeline/Spine/Sprite"
 			#pragma multi_compile _ _ADDITIONAL_LIGHT_SHADOWS
 			#pragma multi_compile _ _SHADOWS_SOFT
 			#pragma multi_compile _ _MIXED_LIGHTING_SUBTRACTIVE
-			
+
 			// -------------------------------------
 			// Unity defined keywords
 			#pragma multi_compile _ DIRLIGHTMAP_COMBINED
 			#pragma multi_compile _ LIGHTMAP_ON
 			#pragma multi_compile_fog
-			
+
 			//--------------------------------------
 			// GPU Instancing
 			#pragma multi_compile_instancing
-			
+
 			//--------------------------------------
 			// Spine related keywords
 			#pragma shader_feature _ _STRAIGHT_ALPHA_INPUT
@@ -133,8 +132,8 @@ Shader "Universal Render Pipeline/Spine/Sprite"
 			#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
 			#include "Packages/com.unity.render-pipelines.core/ShaderLibrary/CommonMaterial.hlsl"
 
-			#include "CGIncludes/Spine-Input-URP.hlsl"
-			#include "CGIncludes/Spine-Sprite-ForwardPass-URP.hlsl"
+			#include "Include/Spine-Input-URP.hlsl"
+			#include "Include/Spine-Sprite-ForwardPass-URP.hlsl"
 			ENDHLSL
 		}
 
@@ -172,8 +171,8 @@ Shader "Universal Render Pipeline/Spine/Sprite"
 			#define fixed4 half4
 			#define fixed3 half3
 			#define fixed half
-			#include "CGIncludes/Spine-Input-URP.hlsl"
-			#include "CGIncludes/Spine-Sprite-ShadowCasterPass-URP.hlsl"
+			#include "Include/Spine-Input-URP.hlsl"
+			#include "Include/Spine-Sprite-ShadowCasterPass-URP.hlsl"
 			ENDHLSL
 		}
 
@@ -190,7 +189,6 @@ Shader "Universal Render Pipeline/Spine/Sprite"
 			// Required to compile gles 2.0 with standard srp library
 			#pragma prefer_hlslcc gles
 			#pragma exclude_renderers d3d11_9x
-			#pragma target 2.0
 
 			#pragma vertex DepthOnlyVertexSprite
 			#pragma fragment DepthOnlyFragmentSprite
@@ -211,12 +209,12 @@ Shader "Universal Render Pipeline/Spine/Sprite"
 			#define fixed4 half4
 			#define fixed3 half3
 			#define fixed half
-			#include "CGIncludes/Spine-Input-URP.hlsl"
-			#include "CGIncludes/Spine-DepthOnlyPass-URP.hlsl"
+			#include "Include/Spine-Input-URP.hlsl"
+			#include "Include/Spine-DepthOnlyPass-URP.hlsl"
 			ENDHLSL
 		}
 	}
-	
+
 	FallBack "Hidden/InternalErrorShader"
 	CustomEditor "SpineSpriteShaderGUI"
 }
