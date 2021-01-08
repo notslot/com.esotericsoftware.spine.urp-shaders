@@ -1,8 +1,8 @@
 #ifndef VERTEX_LIT_FORWARD_PASS_URP_INCLUDED
 #define VERTEX_LIT_FORWARD_PASS_URP_INCLUDED
 
+#include "Include/Spine-Sprite-Common-URP.hlsl"
 #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Lighting.hlsl"
-
 #include "SpineCoreShaders/SpriteLighting.cginc"
 
 #if defined(_RIM_LIGHTING) || defined(_ADDITIONAL_LIGHTS) || defined(MAIN_LIGHT_CALCULATE_SHADOWS)
@@ -142,8 +142,13 @@ half4 LightweightFragmentBlinnPhongSimplified(InputData inputData, half4 texDiff
 	for (int i = 0; i < pixelLightCount; ++i)
 	{
 		Light light = GetAdditionalLight(i, inputData.positionWS);
-		half3 attenuatedLightColor = light.color * (light.distanceAttenuation * light.shadowAttenuation);
+		half3 attenuation = (light.distanceAttenuation * light.shadowAttenuation);
+		half3 attenuatedLightColor = light.color * attenuation;
+#ifndef _DIFFUSE_RAMP
 		diffuseLighting += LightingLambert(attenuatedLightColor, light.direction, inputData.normalWS);
+#else
+		diffuseLighting += LightingLambertRamped(light.color, attenuation, light.direction, inputData.normalWS);
+#endif
 	}
 #endif
 #ifdef _ADDITIONAL_LIGHTS_VERTEX
